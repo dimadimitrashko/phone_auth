@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:provider/provider.dart';
 
-import 'HomeScreen.dart';
-import 'LoginScreen.dart';
-import 'google_sign_in.dart';
-import 'notification_service.dart';
+import 'screens/HomeScreen.dart';
+import 'screens/LoginScreen.dart';
+import 'provider/google_sign_in.dart';
+import 'provider/notification_service.dart';
 
 const NotificationDetails platformChannelSpecifics =
     NotificationDetails(android: _androidNotificationDetails);

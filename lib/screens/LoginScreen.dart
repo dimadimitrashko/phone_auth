@@ -1,11 +1,11 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:phone_login/OTPController.dart';
+import 'package:phone_login/screens/OTPController.dart';
 import 'package:phone_login/screens/LoggedInWidget.dart';
 import 'package:provider/provider.dart';
 
-import 'google_sign_in.dart';
+import '../provider/google_sign_in.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

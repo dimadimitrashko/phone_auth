@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
 import 'HomeScreen.dart';
-import 'main.dart';
-import 'notification_service.dart';
+import '../main.dart';
+import '../provider/notification_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -112,7 +112,7 @@ class _OTPControllerScreenState extends State<OTPControllerScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 30,left: 1,right: 1),
+                padding: const EdgeInsets.only(top: 30, left: 1, right: 1),
                 child: Image.asset("images/otp.png"),
               ),
               Container(
@@ -148,13 +148,8 @@ class _OTPControllerScreenState extends State<OTPControllerScreen> {
                       });
                     } catch (e) {
                       FocusScope.of(context).unfocus();
-                      NotificationService()
-                          .showNotifications("incorrect", "check cod", "Payload");
-                      //ScaffoldMessenger.of(context
-                      //ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      //   content: Text("Invalid OTP"),
-                      //   duration: Duration(seconds: 50),
-                      // ));
+                      NotificationService().showNotifications(
+                          "incorrect", "check cod", "Payload");
                     }
                   },
                 ),

@@ -2,19 +2,16 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
-import 'main.dart';
+import '../main.dart';
 
 class NotificationService {
-  //Singleton pattern
   static final NotificationService _notificationService =
       NotificationService._internal();
 
   Future<void> init() async {
-    //Initialization Settings for Android
     final AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings("@mipmap/ic_launcher");
 
-    //InitializationSettings for initializing settings for both platforms (Android & iOS)
     final InitializationSettings initializationSettings =
         InitializationSettings(android: initializationSettingsAndroid);
 
@@ -51,12 +48,6 @@ class NotificationService {
   }
 
   Future selectNotification(String payload) async {
-    // Navigator.of(context)
-    //     .push(MaterialPageRoute(builder: (c) => MyApp()));
-    // await Navigator.push(
-    //   context,
-    //   MaterialPageRoute<void>(builder: (context) => SecondScreen(payload)),
-    // );
   }
 
   factory NotificationService() {
@@ -65,7 +56,6 @@ class NotificationService {
 
   NotificationService._internal();
 
-  //instance of FlutterLocalNotificationsPlugin
   final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
 }
