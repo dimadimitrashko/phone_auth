@@ -142,8 +142,8 @@ class _OTPControllerScreenState extends State<OTPControllerScreen> {
                               verificationId: varificationCode!, smsCode: pin))
                           .then((value) {
                         if (value.user != null) {
-                          Navigator.of(context).push(
-                              MaterialPageRoute(builder: (c) => LoggedInWidget()));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (c) => LoggedInWidget()));
                         }
                       });
                     } catch (e) {
