@@ -92,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       text:
                           'Sign up with Google',
                       style: const TextStyle(
-                        fontSize: 20.0,
+                        fontSize: 17.0,
                         color: Colors.blue,
                       ),
                       recognizer: TapGestureRecognizer()

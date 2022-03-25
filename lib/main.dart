@@ -3,9 +3,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:phone_login/screens/LoggedInWidget.dart';
 import 'package:provider/provider.dart';
 
-import 'screens/HomeScreen.dart';
 import 'screens/LoginScreen.dart';
 import 'provider/google_sign_in.dart';
 import 'provider/notification_service.dart';
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
     if (FirebaseAuth.instance.currentUser == null) {
       return LoginScreen();
     } else {
-      return HomeScreen();
+      return LoggedInWidget();
     }
   }
 }

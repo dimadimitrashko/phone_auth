@@ -4,9 +4,9 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
-import 'HomeScreen.dart';
 import '../main.dart';
 import '../provider/notification_service.dart';
+import 'LoggedInWidget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -76,7 +76,7 @@ class _OTPControllerScreenState extends State<OTPControllerScreen> {
             .then((value) {
           if (value.user != null) {
             Navigator.of(context)
-                .push(MaterialPageRoute(builder: (c) => HomeScreen()));
+                .push(MaterialPageRoute(builder: (c) => LoggedInWidget()));
           }
         });
       },
@@ -143,7 +143,7 @@ class _OTPControllerScreenState extends State<OTPControllerScreen> {
                           .then((value) {
                         if (value.user != null) {
                           Navigator.of(context).push(
-                              MaterialPageRoute(builder: (c) => HomeScreen()));
+                              MaterialPageRoute(builder: (c) => LoggedInWidget()));
                         }
                       });
                     } catch (e) {
