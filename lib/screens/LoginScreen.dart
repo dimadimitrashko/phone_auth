@@ -89,19 +89,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text:
-                          'Sign up with Google',
+                      text: 'Sign up with Google',
                       style: const TextStyle(
                         fontSize: 17.0,
                         color: Colors.blue,
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () async {
-                          final provider =
-                          Provider.of<GoogleSignInProvider>(context, listen: false);
+                          final provider = Provider.of<GoogleSignInProvider>(
+                              context,
+                              listen: false);
                           await provider.googleLogin();
-                          Navigator.of(context).push(
-                              MaterialPageRoute(builder: (c) => LoggedInWidget()));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (c) => LoggedInWidget()));
                         },
                     ),
                   ],
