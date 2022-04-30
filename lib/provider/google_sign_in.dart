@@ -27,6 +27,7 @@ class GoogleSignInProvider extends ChangeNotifier {
       print(e.toString());
     }
   }
+
   notifyListeners();
 
   Future logout() async {
