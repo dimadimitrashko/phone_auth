@@ -50,6 +50,14 @@ class LoggedInWidget extends StatelessWidget {
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.bold))),
+          // Row(
+          //   children: [
+          //     ButtonWidget(
+          //       text:'',
+          //       Icons.
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     );
